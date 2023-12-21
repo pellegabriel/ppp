@@ -1,0 +1,98 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background: url("/path-to-header-background.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.headerContent {
+  padding: 2rem;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.buttonContainer {
+  button {
+    background-color: #006837;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#006837, 10%);
+    }
+  }
+}
+
+.mainContent {
+  padding: 2rem;
+}
+
+.productShowcase {
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.flowerSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.flowerBox {
+  margin: 10px;
+  width: calc(50% - 20px);
+  text-align: center;
+}
+
+.flowerImage {
+  width: 100%;
+  height: auto;
+}
+
+.flowerText {
+}
+
+.footer {
+  width: 100%;
+}
