@@ -4,9 +4,9 @@ import { NavigationLink, FlowerBox, Button } from '../components';
 import styles from "./page.module.scss";
 
 const navigationLinks = [
-  { href: '/about-us', text: 'About Us' },
-  { href: '/our-flowers-oils', text: 'Our Flowers & Oils' },
-  { href: '/investor-relations', text: 'Investor Relations' },
+  { href: '/aboutUs', text: 'About Us' },
+  { href: '/ourFlowersOils', text: 'Our Flowers & Oils' },
+  { href: '/relations', text: 'Relations' },
 ];
 
 const flowerData = [
