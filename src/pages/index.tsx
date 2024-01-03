@@ -1,29 +1,54 @@
 "use client";
 
-import { NavigationLink, FlowerBox, Button } from '../components';
+import { NavigationLink, Button } from "../components";
+import FlowerBox from "../components/FlowerBox";
+import Image from 'next/image';
+
 import styles from "./page.module.scss";
+import coco1 from "../../assets/coco1.jpg";
+import coco2 from "../../assets/coco2.jpg";
+
 
 const navigationLinks = [
-  { href: '/aboutUs', text: 'About Us' },
-  { href: '/ourFlowersOils', text: 'Our Flowers & Oils' },
-  { href: '/relations', text: 'Relations' },
+  { href: "/aboutUs", text: "About Us" },
+  { href: "/ourFlowersOils", text: "Our Flowers & Oils" },
+  { href: "/relations", text: "Relations" },
 ];
 
 const flowerData = [
-  { image: '/path-to-dairy-queen.jpg', alt: 'Dairy Queen', text: 'Dairy Queen (DQ) - Texto descriptivo' },
-  { image: '/path-to-tel-aviv.jpg', alt: 'Tel Aviv', text: 'Tel Aviv - Texto descriptivo' },
+  {
+    image: coco1,
+    alt: "Dairy Queen",
+    text: "Dairy Queen (DQ) - Texto descriptivo",
+  },
+  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+  {
+    image: coco1,
+    alt: "Dairy Queen",
+    text: "Dairy Queen (DQ) - Texto descriptivo",
+  },
+  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+  {
+    image: coco1,
+    alt: "Dairy Queen",
+    text: "Dairy Queen (DQ) - Texto descriptivo",
+  },
+  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
 ];
-
 export default function Page() {
+
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
         <nav className={styles.navigation}>
-          {navigationLinks.map(link => (
-            <NavigationLink href={link.href} key={link.text}>{link.text}</NavigationLink>
+          {navigationLinks.map((link) => (
+            <NavigationLink href={link.href} key={link.text}>
+              {link.text}
+            </NavigationLink>
           ))}
         </nav>
         <div className={styles.headerContent}>
+          <Image src="/assets/logoONG.png" alt="Logo ONG" width={150} height={75} layout="fixed" />
           <h1>High-Quality Medical Cannabis</h1>
           <p>
             As a leading company approved by the MOH for the past decade, IMC
@@ -37,8 +62,13 @@ export default function Page() {
         </div>
       </header>
       <main className={styles.mainContent}>
-        {flowerData.map(flower => (
-          <FlowerBox key={flower.alt} image={flower.image} alt={flower.alt} text={flower.text} />
+        {flowerData.map((flower, index) => (
+          <FlowerBox
+            key={index}
+            image={flower.image}
+            alt={flower.alt}
+            text={flower.text}
+          />
         ))}
       </main>
       <footer className={styles.footer}>

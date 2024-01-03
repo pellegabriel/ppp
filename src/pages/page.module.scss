@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -14,40 +15,41 @@
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; // Centra los enlaces de navegación
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); // Fondo oscuro semitransparente
   a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    margin: 0 15px; // Añade espacio horizontal entre enlaces
     &:hover {
-      text-decoration: underline;
+      color: #d2d2d2; // Cambio de color al pasar el ratón por encima
     }
   }
 }
 
 .headerContent {
+  text-align: center; // Centra el contenido del encabezado
   padding: 2rem;
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; // Aumenta el espacio bajo el párrafo
   }
 }
 
 .buttonContainer {
   button {
-    background-color: #006837;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-    cursor: pointer;
+    background-color: #424242; // Un gris oscuro para el fondo del botón
+    color: #fff;
+    border: 1px solid #fff; // Añade borde blanco
+    padding: 0.75rem 1.5rem; // Aumenta el relleno para botones más grandes
+    margin: 0 10px; // Espacio entre botones
+    font-weight: bold;
     &:hover {
-      background-color: darken(#006837, 10%);
+      background-color: #303030; // Oscurece el botón al pasar el ratón por encima
     }
   }
 }
@@ -71,28 +73,51 @@
   width: 100%;
 }
 
+// Dentro de page.module.scss
 .flowerSection {
-  display: flex;
+  justify-content: space-between; // Asegúrate de que haya espacio alrededor de cada caja
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 20px 0;
-  width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .flowerBox {
+  width: calc(33.333% - 20px); // Tres cajas por fila con espacio entre ellas
   margin: 10px;
-  width: calc(50% - 20px);
-  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra para resaltar las cajas
+  transition: transform 0.3s ease; // Suaviza la transición del hover
+  display: flex;
+  flex-direction: row;
+  &:hover {
+    transform: translateY(-5px); // Eleva la caja al pasar el ratón por encima
+    cursor: pointer; // Cambia el cursor para indicar interactividad
+  }
+
+  .flowerImage {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease; // Suaviza la transición de opacidad
+    &:hover {
+      opacity: 0.8; // Hace la imagen ligeramente transparente al pasar el ratón por encima
+    }
+  }
+
+  .flowerText {
+    padding: 1rem; // Añade relleno alrededor del texto
+  }
 }
 
-.flowerImage {
-  width: 100%;
-  height: auto;
-}
 
 .flowerText {
 }
 
+// Dentro de page.module.scss
 .footer {
-  width: 100%;
+  padding: 2rem;
+  background: #424242; // Un fondo oscuro para el pie de página
+  color: #fff;
+  text-align: center; // Centra el contenido del pie de página
 }
+
