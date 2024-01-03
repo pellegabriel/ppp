@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from "./page.module.scss";
 import coco1 from "../../assets/coco1.jpg";
 import coco2 from "../../assets/coco2.jpg";
-import FlowerBox from "../components/FlowerBox";
+import { FlowerBox } from "../components/FlowerBox";
 
 
 const navigationLinks = [
