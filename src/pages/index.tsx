@@ -1,7 +1,6 @@
 "use client";
 
-import { NavigationLink, Button } from "../components";
-import FlowerBox from "../components/FlowerBox";
+import { NavigationLink, Button, FlowerBox } from "../components";
 import Image from 'next/image';
 
 import styles from "./page.module.scss";
