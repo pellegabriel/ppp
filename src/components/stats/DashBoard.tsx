@@ -116,7 +116,6 @@ export default function Dashboard() {
 
 	const winsBy = calculatePercentages(gameData.wins)
 	const drawsBy = calculatePercentages(gameData.draws)
-	const lossesBy = calculatePercentages(gameData.losses)
 	return (
     <>
 		<div className={styles.dashboard}>
@@ -129,7 +128,6 @@ export default function Dashboard() {
 				<div className={styles.cakeGraphSection}>
 					<CakeGraph data={winsBy} />
 					<CakeGraph data={drawsBy} />
-					<CakeGraph data={lossesBy} />
 				</div>
 
 			</div>
