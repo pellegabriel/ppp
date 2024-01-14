@@ -1,0 +1,48 @@
+// timeStats.module.scss
+.timeStats {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	font-size: 1.5rem;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.statBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    color: #323232;
+
+	background-color: #F5E2A0;
+	padding: 20px;
+}
+.statBlock2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  color: #F5E2A0;
+	background-color: #323232;
+	padding: 20px;
+}
+.statBlock3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    color: #323232;
+
+	background-color: #F5E2A0;
+	padding: 20px;
+}
+.statHeader {
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.statValue {
+	font-size: 1rem;
+}
+.statValueHead {
+	font-size: 1.2rem;
+}

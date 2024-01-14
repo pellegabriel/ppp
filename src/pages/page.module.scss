@@ -1,8 +1,9 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   height: 100%;
+
 }
 
 .header {
@@ -15,48 +16,54 @@
 
 .navigation {
   display: flex;
-  justify-content: center; // Centra los enlaces de navegación
+  justify-content: center; 
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.7); // Fondo oscuro semitransparente
+  background: rgba(0, 0, 0, 0.7);
   a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px; // Añade espacio horizontal entre enlaces
+    margin: 0 15px;
     &:hover {
-      color: #d2d2d2; // Cambio de color al pasar el ratón por encima
+      color: #d2d2d2; 
     }
   }
 }
 
 .headerContent {
-  text-align: center; // Centra el contenido del encabezado
+  text-align: center;
   padding: 2rem;
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   p {
-    margin-bottom: 2rem; // Aumenta el espacio bajo el párrafo
+    margin-bottom: 2rem;
   }
 }
 
 .buttonContainer {
   button {
-    background-color: #424242; // Un gris oscuro para el fondo del botón
+    background-color: #424242; 
     color: #fff;
-    border: 1px solid #fff; // Añade borde blanco
-    padding: 0.75rem 1.5rem; // Aumenta el relleno para botones más grandes
-    margin: 0 10px; // Espacio entre botones
+    border: 1px solid #fff; 
+    padding: 0.75rem 1.5rem; 
+    margin: 0 10px; 
     font-weight: bold;
     &:hover {
-      background-color: #303030; // Oscurece el botón al pasar el ratón por encima
+      background-color: #303030; 
     }
   }
 }
 
 .mainContent {
+  width: 50%; 
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto; 
 }
+
 
 .productShowcase {
   h2 {
@@ -65,59 +72,48 @@
     margin-bottom: 1rem;
   }
 }
-
 .mainContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-// Dentro de page.module.scss
-.flowerSection {
-  justify-content: space-between; // Asegúrate de que haya espacio alrededor de cada caja
   flex-wrap: wrap;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  justify-content: center;
+  padding: 2rem;
 }
 
 .flowerBox {
-  width: calc(33.333% - 20px); // Tres cajas por fila con espacio entre ellas
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añade sombra para resaltar las cajas
-  transition: transform 0.3s ease; // Suaviza la transición del hover
-  display: flex;
-  flex-direction: row;
+width: 200px;  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
   &:hover {
-    transform: translateY(-5px); // Eleva la caja al pasar el ratón por encima
-    cursor: pointer; // Cambia el cursor para indicar interactividad
+    transform: translateY(-5px);
   }
 
   .flowerImage {
-    width: 100%;
+    width: 100%; 
     height: auto;
-    transition: opacity 0.3s ease; // Suaviza la transición de opacidad
+    transition: opacity 0.3s ease;
+
     &:hover {
-      opacity: 0.8; // Hace la imagen ligeramente transparente al pasar el ratón por encima
+      opacity: 0.8;
     }
   }
 
   .flowerText {
-    padding: 1rem; // Añade relleno alrededor del texto
+    padding: 1rem; 
   }
 }
 
-
-.flowerText {
+@media (max-width: 768px) {
+  .flowerBox {
+    width: 100%;
+  }
 }
 
 // Dentro de page.module.scss
 .footer {
   padding: 2rem;
-  background: #424242; // Un fondo oscuro para el pie de página
+  background: #424242; 
   color: #fff;
-  text-align: center; // Centra el contenido del pie de página
+  text-align: center; 
 }
 

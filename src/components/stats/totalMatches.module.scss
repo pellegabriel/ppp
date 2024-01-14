@@ -1,0 +1,80 @@
+// totalMatches.module.scss
+.totalMatches {
+  display: flex;
+  color: #fff; 
+  align-items: center;
+  padding: 10px; 
+  color:#F5E2A0;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center; 
+}
+
+.verticalTextContainer {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg); 
+}
+
+.verticalText {
+  font-size: 6rem;
+  font-weight: lighter; 
+}
+
+.statsSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+
+.matchesCount {
+  font-size: 3rem; 
+  align-self: flex-start;
+  font-weight: bold;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.winLetter {
+  background-color: #F5E2A0; 
+    color: #323232;
+
+}
+
+.lossLetter {
+  background-color: #97577D; 
+}
+
+.drawLetter {
+  background-color: #323232; 
+}
+.numbersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 10px;
+}
+
+.statLetter {
+  font-size: 3rem; 
+  margin-right: 5px; 
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statNumbers {
+  font-size: 2rem; 
+}
+
+.statPercent {
+  font-size: 2rem; 
+}

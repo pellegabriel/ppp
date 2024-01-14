@@ -15,25 +15,34 @@ const navigationLinks = [
   { href: "/relations", text: "Relations" },
 ];
 
-const flowerData = [
+export const flowerData = [
   {
+    id: 'coco1',
     image: coco1,
     alt: "Dairy Queen",
     text: "Dairy Queen (DQ) - Texto descriptivo",
   },
-  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
-  {
+  { 
+    id: 'coco2',image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+  {    id: 'coco3',
     image: coco1,
     alt: "Dairy Queen",
     text: "Dairy Queen (DQ) - Texto descriptivo",
   },
-  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+  {     id: 'coco4',image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
   {
+    id: 'coco5',image: coco1,
+    alt: "Dairy Queen",
+    text: "Dairy Queen (DQ) - Texto descriptivo",
+  },
+  {    id: 'coco6', image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+  {
+    id: 'coco7',
     image: coco1,
     alt: "Dairy Queen",
     text: "Dairy Queen (DQ) - Texto descriptivo",
   },
-  { image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
+
 ];
 export default function Page() {
 
@@ -61,18 +70,18 @@ export default function Page() {
           </div>
         </div>
       </header>
-      <main className={styles.mainContent}>
-        {flowerData.map((flower, index) => (
+      <div className={styles.mainContent}>
+      {flowerData.map((flower, index) => (
           <FlowerBox
             key={index}
+            id={flower.id}
             image={flower.image}
             alt={flower.alt}
             text={flower.text}
           />
         ))}
-      </main>
+      </div>
       <footer className={styles.footer}>
-        {/* Contenido del pie de página */}
       </footer>
     </div>
   );

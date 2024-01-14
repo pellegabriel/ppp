@@ -1,0 +1,34 @@
+.dashboard {
+  width: 50%; 
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto; 
+
+}
+
+.matchStats {
+  // Estilos para la sección de estadísticas de partidas
+  display: flex;
+  // Añadir más estilos aquí
+}
+
+.totalMatches {
+  display: flex;
+  justify-content: center;
+height: 500px;
+}
+
+.cakeGraphSection {
+    // width: 500px;
+    height: 300px;
+    display: flex;
+padding: 20px;}
+.statGraphColumn {
+
+}
+.text {
+  font-size: x-large; 
+  color: black;
+}
