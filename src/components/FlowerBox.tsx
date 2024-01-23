@@ -14,7 +14,7 @@ export function FlowerBox({ id, image, alt, text }) {
   };
 
   return (
-    <div className={styles.flowerBox} onClick={handleClick}>
+    <div className={styles.flowerBox}>
       <Image src={image} alt={alt} width={200} height={200} />
       <p className={styles.flowerText}>{text}</p>
     </div>

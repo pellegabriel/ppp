@@ -3,15 +3,73 @@
   flex-direction: column;
   width: 100vw;
   height: 100%;
-
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  //     background: url("../../assets/fondo.jpg") no-repeat center center;
+  // background-size: cover;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   flex-direction: column;
-  background: url("../../assets/fondo.jpg") no-repeat center center;
-  background-size: cover;
-  color: #fff;
+
+}
+
+.logoAndTitle {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.socialMediaButtons {
+  margin-left: 100px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageScrollContainer {
+  display: flex;
+  overflow-x: auto; 
+  cursor: grab;
+  width: 50%;
+  &:active {
+    cursor: grabbing; 
+  }
+
+  .scrollItem {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+
+  button {
+    margin-left: 10px;
+  }
 }
 
 .navigation {
@@ -30,7 +88,7 @@
 }
 
 .headerContent {
-  text-align: center;
+  text-align: center; 
   padding: 2rem;
   h1 {
     font-size: 2.5rem;
@@ -40,14 +98,19 @@
     margin-bottom: 2rem;
   }
 }
-
+.animatedText {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  
+}
 .buttonContainer {
   button {
-    background-color: #424242; 
+    background-color: #424242;
     color: #fff;
     border: 1px solid #fff; 
-    padding: 0.75rem 1.5rem; 
-    margin: 0 10px; 
+    padding: 0.75rem 1.5rem;
+    margin: 0 10px;
     font-weight: bold;
     &:hover {
       background-color: #303030; 
@@ -58,10 +121,7 @@
 .mainContent {
   width: 50%; 
   padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto; 
+  height: 100%;
 }
 
 
@@ -74,27 +134,37 @@
 }
 .mainContent {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.flowerSection {
+  justify-content: space-between; 
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
 }
 
 .flowerBox {
-width: 200px;  margin: 10px;
+  width: 200px;
+  margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-
+  transition: transform 0.3s ease; 
+  display: flex;
+  flex-direction: column;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); 
+    cursor: pointer;
   }
 
   .flowerImage {
     width: 100%; 
     height: auto;
-    transition: opacity 0.3s ease;
-
+    transition: opacity 0.3s ease; 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.8; 
     }
   }
 
@@ -109,11 +179,12 @@ width: 200px;  margin: 10px;
   }
 }
 
-// Dentro de page.module.scss
 .footer {
-  padding: 2rem;
+    position: fixed; 
+  bottom: 0;
+  width: 100%; 
   background: #424242; 
   color: #fff;
-  text-align: center; 
+  text-align: center;
 }
 
