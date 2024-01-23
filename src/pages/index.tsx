@@ -105,12 +105,14 @@ export default function Page() {
       <header className={styles.header}>
         <div className={styles.logoAndTitle}>
           <Image src={logo} alt="Logo" width={200} height={200} />
+        
         </div>
+                  <h1>Plantas Para el Pueblo</h1>
+
       </header>
       <div className={styles.title}>
         <div className={styles.headerContent}>
-          <h1>Plantas Para el Pueblo</h1>
-          <p>
+          <p style={{color: 'white'}}>
             As a leading company approved by the MOH for the past decade, IMC
             works tirelessly to allow our patients to live a happy & fulfilling
             life.
