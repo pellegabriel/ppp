@@ -1,26 +1,37 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  background: rgb(166,166,166);
-background: radial-gradient(circle, rgba(166,166,166,1) 0%, rgba(253,255,253,1) 100%);
+      top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: url("../../assets/fondoTodo.png") no-repeat center center;
+  background-size: cover;
 }
-.button{
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      &:hover {
-        color: #d2d2d2;
-      }
-  
+
+.button {
+  display: flex;
+  justify-content: center;
+  background: transparent; /* Fondo transparente */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  border: none; /* Eliminar bordes */
+  box-shadow: none; /* Eliminar sombras */
+  outline: none; /* Eliminar el contorno que podría aparecer al hacer clic */
+  text-shadow: none; /* Eliminar sombras de texto, si las hay */
 }
+
+.button:hover {
+  color: #d2d2d2;
+  background: transparent; /* Asegurarse de que el fondo también es transparente en hover */
+  box-shadow: none; /* Asegurarse de que no hay sombras en hover */
+}
+
+
 .title {
   display: flex;
   justify-content: space-between;
@@ -35,6 +46,7 @@ background: radial-gradient(circle, rgba(166,166,166,1) 0%, rgba(253,255,253,1) 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
   padding: 1rem;
   flex-direction: column;
 }
@@ -123,10 +135,24 @@ background: radial-gradient(circle, rgba(166,166,166,1) 0%, rgba(253,255,253,1) 
   }
 }
 .animatedText {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  font-weight:400;
+  font-size: medium;
+}
+.animatedTextTop{
   width: 50%;
   justify-content: center;
   align-items: center;
   padding: 40px;
+  color: #fff;
+  font-weight:400;
+   background: rgba(0, 0, 0, 0.5);
+  font-size: medium;
+  border-radius: 5px;
 }
 .buttonContainer {
   button {
@@ -146,6 +172,9 @@ background: radial-gradient(circle, rgba(166,166,166,1) 0%, rgba(253,255,253,1) 
   width: 50%;
   padding: 2rem;
   height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     margin-top: 50px;
+
 }
 
 .productShowcase {
@@ -200,7 +229,7 @@ background: radial-gradient(circle, rgba(166,166,166,1) 0%, rgba(253,255,253,1) 
     width: 100%;
   }
 }
-
+.header{ padding: 50px;}
 .footer {
   position: fixed;
   bottom: 0;

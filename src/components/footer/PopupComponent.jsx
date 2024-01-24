@@ -6,7 +6,7 @@ export const PopupComponent = ({ onClose }) => {
     <div className={styles.popupBackground}>
       <div className={styles.popupContainer}>
         <p>Nos alegramos de que te interese nuestra medicina. Por favor, si quieres tener detalles de lo que producimos, contáctate con nosotros en alguna red social o clickea el botón "Cómo unirme".</p>
-        <button onClick={onClose}>Cerrar</button>
+        <button onClick={onClose} className={styles.button}>Cerrar</button>
       </div>
     </div>
   );

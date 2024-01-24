@@ -7,7 +7,6 @@ import { useSpring, animated } from "react-spring";
 import { Footer } from "../components/footer/footer";
 import coco1 from "../../assets/coco1.jpg";
 import coco2 from "../../assets/coco2.jpg";
-
  const flowerData = [
   {
     id: 'coco1',
@@ -114,7 +113,7 @@ export default function Page() {
         </div>
         
       </header>
-      <animated.div style={fadeIn} className={styles.animatedText}>
+      <animated.div style={fadeIn} className={styles.animatedTextTop} >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
           distinctio corporis doloremque, amet vero voluptatum, consectetur
@@ -127,7 +126,6 @@ export default function Page() {
         ref={scrollContainerRef}
         onMouseDown={onDragStart}
         onTouchStart={onDragStart}>
-        {" "}
         {flowerData.map((flower, index) => (
           <div key={index} className={styles.scrollItem}>
             <div
