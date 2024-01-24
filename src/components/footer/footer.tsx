@@ -58,9 +58,9 @@ export const Footer = () => {
             </a>
           </div>
           <div style={{display: 'flex', marginTop: '40px'}}>
-           <button className={styles.buttonFooter} onClick={openPopupFlowers}>
+           {/* <button className={styles.buttonFooter} onClick={openPopupFlowers}>
             Nuestras flores
-          </button>
+          </button> */}
           <button className={styles.buttonFooter} onClick={openPopupWpp}>
             ¿Como ser parte?
           </button>
