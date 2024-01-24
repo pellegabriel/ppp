@@ -1,57 +1,12 @@
 "use client";
-
-import { NavigationLink, Button } from "../components";
 import Image from "next/image";
-
 import styles from "./page.module.scss";
-import coco1 from "../../assets/coco1.jpg";
-import coco2 from "../../assets/coco2.jpg";
-import { FlowerBox } from "../components/FlowerBox";
 import logo from "../../assets/logoONG.png";
 import { useEffect, useRef, useState } from "react";
 import { useSpring, animated } from "react-spring";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { flowerData, navigationLinks } from "./data";
+import { Footer } from "../components/footer/footer";
 
-const navigationLinks = [
-  { href: "/aboutUs", text: "Sobre Nosotros" },
-  { href: "/ourFlowersOils", text: "Nuestras flores" },
-  { href: "/relations", text: "Como ser parte..." },
-];
-
-export const flowerData = [
-  {
-    id: 'coco1',
-    image: coco1,
-    alt: "Dairy Queen",
-    text: "Dairy Queen (DQ) - Texto descriptivo",
-  },
-  { 
-    id: 'coco2',image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
-  {    id: 'coco3',
-    image: coco1,
-    alt: "Dairy Queen",
-    text: "Dairy Queen (DQ) - Texto descriptivo",
-  },
-  {     id: 'coco4',image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
-  {
-    id: 'coco5',image: coco1,
-    alt: "Dairy Queen",
-    text: "Dairy Queen (DQ) - Texto descriptivo",
-  },
-  {    id: 'coco6', image: coco2, alt: "Tel Aviv", text: "Tel Aviv - Texto descriptivo" },
-  {
-    id: 'coco7',
-    image: coco1,
-    alt: "Dairy Queen",
-    text: "Dairy Queen (DQ) - Texto descriptivo",
-  },
-
-];
 export default function Page() {
   const [showText, setShowText] = useState(false);
 
@@ -100,29 +55,35 @@ export default function Page() {
       { once: true }
     );
   };
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const { offsetX, offsetY, target } = e.nativeEvent;
+    const { clientWidth, clientHeight } = target;
+
+    const x = (offsetX / clientWidth - 0.5) * 2; // Rango -1 a 1
+    const y = (offsetY / clientHeight - 0.5) * 2; // Rango -1 a 1
+
+    setMousePos({ x, y });
+  };
+
+  const logoStyle = {
+    transform: `perspective(500px) rotateX(${-mousePos.y * 20}deg) rotateY(${mousePos.x * 20}deg)`
+  };
+
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
-        <div className={styles.logoAndTitle}>
-          <Image src={logo} alt="Logo" width={200} height={200} />
-        
-        </div>
-                  <h1>Plantas Para el Pueblo</h1>
+      <h1>PLANTAS PARA EL PUEBLO</h1>
 
-      </header>
-      <div className={styles.title}>
-        <div className={styles.headerContent}>
-          <p style={{color: 'white'}}>
-            As a leading company approved by the MOH for the past decade, IMC
-            works tirelessly to allow our patients to live a happy & fulfilling
-            life.
-          </p>
-          <div className={styles.buttonContainer}>
-            <Button>Registrate</Button>
-            <Button>Iniciar Sesion</Button>
-          </div>
+        <div
+          className={styles.logoAndTitle}
+          onMouseMove={handleMouseMove}
+          style={logoStyle}>
+          <Image src={logo} alt="Logo" width={300} height={300} />
         </div>
-      </div>
+        
+      </header>
       <animated.div style={fadeIn} className={styles.animatedText}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -139,12 +100,6 @@ export default function Page() {
         {" "}
         {flowerData.map((flower, index) => (
           <div key={index} className={styles.scrollItem}>
-            {/* <Image
-              src={flower.image}
-              alt={flower.alt}
-              width={300}
-              height={200}
-            /> */}
             <div
               style={{
                 width: "300px",
@@ -154,6 +109,18 @@ export default function Page() {
               }}></div>
           </div>
         ))}
+      </div>
+
+
+      <div className={styles.title}>
+        <div className={styles.headerContent}>
+          <p style={{color: 'white'}}>
+            As a leading company approved by the MOH for the past decade, IMC
+            works tirelessly to allow our patients to live a happy & fulfilling
+            life.
+          </p>
+
+        </div>
       </div>
 
       <main className={styles.mainContent}>
@@ -173,35 +140,7 @@ export default function Page() {
           </p>
         </animated.div>
       </main>
-      <footer className={styles.footer}>
-        <nav className={styles.navigation}>
-          {navigationLinks.map((link) => (
-            <NavigationLink href={link.href} key={link.text}>
-              {link.text}
-            </NavigationLink>
-          ))}
-          <div className={styles.socialMediaButtons}>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-          </div>
-        </nav>{" "}
-      </footer>
+      <Footer/>
     </div>
   );
 }
