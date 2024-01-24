@@ -31,37 +31,41 @@ export const Footer = () => {
       {isPopupWppOpen && <PopupComponentWpp onClose={closePopups} />}
       <footer className={styles.footer}>
         <nav className={styles.navigation}>
-          {navigationLinks.map((link) => (
+          {/* {navigationLinks.map((link) => (
             <NavigationLink href={link.href} key={link.text}>
               {link.text}
             </NavigationLink>
-          ))}
-                <button className={styles.button} onClick={openPopupFlowers}>
-            Nuestras flores
-          </button>
-          <button className={styles.button} onClick={openPopupWpp}>
-            Como ser parte
-          </button>
+          ))} */}
+       
           <div className={styles.socialMediaButtons}>
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebookF} />
+              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faFacebookF} />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faTwitter} />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faInstagram} />
             </a>
           </div>
+          <div style={{display: 'flex', marginTop: '40px'}}>
+           <button className={styles.buttonFooter} onClick={openPopupFlowers}>
+            Nuestras flores
+          </button>
+          <button className={styles.buttonFooter} onClick={openPopupWpp}>
+            ¿Como ser parte?
+          </button>
+          </div>
+        
         </nav>{" "}
       </footer>
     </>

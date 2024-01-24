@@ -103,18 +103,24 @@ export default function Page() {
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
-      <h1>PLANTAS PARA EL PUEBLO</h1>
+      {/* <h1>PLANTAS PARA EL PUEBLO</h1> */}
 
         <div
           className={styles.logoAndTitle}
           onMouseMove={handleMouseMove}
           style={logoStyle}>
-          <Image src={logo} alt="Logo" width={300} height={300} />
+          <Image src={logo} alt="Logo" width={400} height={400} />
         </div>
         
       </header>
       <animated.div style={fadeIn} className={styles.animatedTextTop} >
         <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          distinctio corporis doloremque, amet vero voluptatum, consectetur
+          ducimus vel praesentium reiciendis soluta temporibus nulla velit
+          architecto pariatur, culpa quasi omnis perferendis.
+        </p>
+            <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
           distinctio corporis doloremque, amet vero voluptatum, consectetur
           ducimus vel praesentium reiciendis soluta temporibus nulla velit
@@ -139,7 +145,7 @@ export default function Page() {
         ))}
       </div>
 
-
+{/* 
       <div className={styles.title}>
         <div className={styles.headerContent}>
           <p style={{color: 'white'}}>
@@ -149,9 +155,9 @@ export default function Page() {
           </p>
 
         </div>
-      </div>
+      </div> */}
 
-      <main className={styles.mainContent}>
+      {/* <main className={styles.mainContent}>
         <animated.div style={fadeIn} className={styles.animatedText}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -167,7 +173,7 @@ export default function Page() {
             architecto pariatur, culpa quasi omnis perferendis.
           </p>
         </animated.div>
-      </main>
+      </main> */}
       <Footer/>
     </div>
   );
