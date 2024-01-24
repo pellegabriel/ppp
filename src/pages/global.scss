@@ -1,7 +1,0 @@
-html, body {
-  height: 100%; /* Esto asegura que la altura mínima sea la del viewport */
-  margin: 0; /* Esto quita cualquier margen predeterminado */
-  overflow: hidden; /* Esto previene el desplazamiento si no deseas que se pueda hacer scroll */
-  background: url("../../assets/fondoTodo.png") no-repeat center center fixed; 
-  background-size: cover;
-}
