@@ -8,7 +8,7 @@ import { Footer } from "../components/footer/footer";
 import coco1 from "../../assets/coco1.jpg";
 import coco2 from "../../assets/coco2.jpg";
 
-export const flowerData = [
+ const flowerData = [
   {
     id: 'coco1',
     image: coco1,
