@@ -42,19 +42,19 @@ export const Footer = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faFacebookF} />
+              <FontAwesomeIcon style={{width:'50px',height:'50px'}} icon={faFacebookF} />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faTwitter} />
+              <FontAwesomeIcon style={{width:'50px',height:'50px'}} icon={faTwitter} />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon style={{width:'80px',height:'80px'}} icon={faInstagram} />
+              <FontAwesomeIcon style={{width:'50px',height:'50px'}} icon={faInstagram} />
             </a>
           </div>
           <div style={{display: 'flex', marginTop: '40px'}}>
