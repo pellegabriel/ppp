@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../../pages/page.module.scss';
-import { navigationLinks } from '../../pages/data';
 import { NavigationLink } from '../NavigationLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import  {PopupComponent}  from './PopupComponent';
 import  {PopupComponentWpp}  from './PopupComponentWpp';
+import { navigationLinks } from '../data';
 
 export const Footer = () => {
   const [isPopupFlowersOpen, setIsPopupFlowersOpen] = useState(false);
