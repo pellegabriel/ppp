@@ -40,7 +40,7 @@ export const Footer = () => {
             Nuestras flores
           </button>
           <button className={styles.button} onClick={openPopupWpp}>
-            Como ser parte...
+            Como ser parte
           </button>
           <div className={styles.socialMediaButtons}>
             <a

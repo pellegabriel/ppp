@@ -2,7 +2,7 @@ import coco1 from "../../assets/coco1.jpg";
 import coco2 from "../../assets/coco2.jpg";
 
 export const navigationLinks = [
-    { href: "/aboutUs", text: "Sobre Nosotros" },
+    { href: "/aboutUs", text: "Sobre nosotros" },
   ];
   
   export const flowerData = [
