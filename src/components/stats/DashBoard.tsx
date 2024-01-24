@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './dashboard.module.scss'
 import { CakeGraph } from './CakeGraph'
-import { flowerData } from '../../pages'
+
 import Image from 'next/image';
 
 import { useRouter } from 'next/router'
@@ -107,7 +107,6 @@ export default function Dashboard() {
   const router = useRouter();
   const { id, alt, text } = router.query;
 
-  const flower = flowerData.find(f => f.id === asString(id));
 
 	const updatedMatchStats = matchStatsData.map((match) => ({
 		...match,
@@ -121,7 +120,6 @@ export default function Dashboard() {
 		<div className={styles.dashboard}>
     <div>
     <p className={styles.text}>{text}</p>
-      {flower && <Image src={flower.image} alt={ 'Imagen'} width={300} height={300} />}
 
     </div>
 			<div className={styles.statGraphColumn}>
